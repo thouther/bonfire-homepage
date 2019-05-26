@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New Tab</title>
+<link rel="stylesheet" href="style.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'> <!-- Downloads the desired font -->
+</head>
+<body>
+<ul class="container">
+        <!-- Start Dropdown -->
+        <li><a class="parent" href="#">Me</a> <!-- Section title -->
+                <ul class="submenu"> <!-- Links Start -->
+                        <li><a class="tab" href="https://thouther.github.io">Blog</a></li>
+                        <!-- <li><a class="tab" href="https://github.com/thouther">Github</a></li> -->
+                        <li><a class="tab" href="https://steamcommunity.com/id/thoutherkai">Steam</a></li>
+                </ul> <!-- Links End -->
+        </li>
+        <!-- End Dropdown Section -->
+        <li><a class="parent" href="#">You</a>
+                <ul class="submenu">
+                        <li><a class="tab" href="https://wiki.archlinux.org/">Arch Wiki</a></li>
+                        <li><a class="tab" href="https://wiki.gentoo.org/wiki/Main_Page">Gentoo Wiki</a></li>
+                        <li><a class="tab" href="https://wiki.archlinux.org/index.php/Comparison_of_tiling_window_managers">Tiling WM</a></li>
+                        <li><a class="tab" href="https://github.com/mhinz/vim-galore">Vim</a></li>
+                        <li><a class="tab" href="https://github.com/brookhong/Surfingkeys">SurfingKeys</a></li>
+                </ul> <!-- Links End -->
+        </li>
+
+<script>
+$('.submenu').hide();
+$("li:has(ul)").click(function(){
+$("ul",this).slideToggle('200');
+});
+</script>
+</body>
+</html>
